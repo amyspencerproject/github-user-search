@@ -37,7 +37,7 @@ The GitHub users API endpoint is `https://api.github.com/users/:username`. So, i
 - If a GitHub user hasn't added their name, show their username where the name would be without the `@` symbol and again below with the `@` symbol.
 - If a GitHub user's bio is empty, show the text "This profile has no bio" with transparency added (as shown in the design). The lorem ipsum text in the designs shows how the bio should look when it is present.
 - If any of the location, website, twitter, or company properties are empty, show the text "Not Available" with transparency added (as shown in the design).
-- Website, twitter, and company information should all be links to those resaources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`.
+- Website, twitter, and company information should all be links to those resources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`.
 
 ### Screenshot
 
@@ -45,8 +45,8 @@ The GitHub users API endpoint is `https://api.github.com/users/:username`. So, i
 
 ### Links
 
-- Github Repo URL: [QR Code Repo](https://github.com/amyspencerproject/qr-code)
-- Live Site URL: [QR Code Page](https://amyspencerproject.github.io/qr-code/)
+- Github Repo URL: [Github User Search Repo](https://github.com/amyspencerproject/github-user-search)
+- Live Site URL: [Github User Search Page](https://amyspencerproject.github.io/github-user-search/)
 
 ## My process
 

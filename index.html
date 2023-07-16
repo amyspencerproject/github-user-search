@@ -21,7 +21,66 @@
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
-    devfinder Light Dark Search GitHub username... Search Joined Repos Followers
-    Following
+    <header>
+      <h1>devfinder</h1>
+      <p class="light-mode">Light</p>
+      <img src="./assets/icon-sun.svg" alt="" class="sun" />
+
+      <p class="dark-mode">Dark</p>
+      <img src="./assets/icon-moon.svg" alt="" class="moon" />
+    </header>
+    <main>
+      <div class="search-container">
+        <img src="./assets/icon-search.svg" alt="" class="search-icon" />
+        <input
+          type="text"
+          class="search"
+          placeholder="Search GitHub username... "
+        />
+        <button>Search</button>
+      </div>
+      <div class="user-info-container">
+        <img src="" alt="" class="user-avatar" />
+        <div class="user-profile">
+          <h2 class="user-name">The Octocat</h2>
+          <h3 class="user-handle">@octocat</h3>
+          <h4 class="user-join">Joined 25 Jan 2011</h4>
+          <p class="user-bio">
+            Octocat is the best team member and most awesome web developer.
+            Front end, backend, fullstack just all the things that you could be
+            that is Octocat!
+          </p>
+        </div>
+      </div>
+      <div class="user-stats">
+        <p class="repos">Repos</p>
+        <p class="number">8</p>
+        <p class="followers">Followers</p>
+        <p class="number">3938</p>
+        <p class="following">Following</p>
+        <p class="number">9</p>
+      </div>
+      <div class="user-links">
+        <div class="location-wrapper">
+          <img src="./assets/icon-location.svg" alt="" />
+          <p class="location">San Francisco</p>
+        </div>
+
+        <div class="twitter-wrapper">
+          <img src="./assets/icon-twitter.svg" alt="" />
+          <a href="" class="twitter">Not Available</a>
+        </div>
+
+        <div class="website-wrapper">
+          <img src="./assets/icon-website.svg" alt="" />
+          <a href="" class="website">https://github.blog</a>
+        </div>
+
+        <div class="org-wrapper">
+          <img src="./assets/icon-company.svg" alt="" />
+          <a href="" class="org">@github</a>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
