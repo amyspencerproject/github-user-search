@@ -108,12 +108,16 @@ header {
 
 main {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 footer {
   display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  font-size: 0.875rem;
 }
 
 /* ========================= Dark Mode ========================= */
@@ -142,24 +146,105 @@ footer {
 }
 
 /* ========================= Base Styles ========================= */
+
+.lt-header {
+  margin: 1rem;
+}
+
 .mode-wrapper {
   display: flex;
+  align-items: center;
 }
 .mode-icon {
-  object-fit: contain;
+  margin: 1rem;
 }
 
 .search-icon {
   object-fit: contain;
+  margin: 1rem;
 }
 .search-container {
   display: flex;
-  padding: 1.5rem;
+  padding: 1rem 3rem;
   border-radius: 15px;
+}
+
+.search {
+  margin: 0.5rem;
+}
+
+.btn-search {
+  margin: 0.5rem;
+}
+
+.user-info-container {
+  background-color: var(--lt-background);
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 2rem 3rem;
+}
+
+.user-profile {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 1rem 2rem;
+}
+
+.user-profile > h2,
+h3,
+h4,
+p {
+  margin: 0.5rem 0;
+}
+
+.user-stats {
+  display: flex;
+  background-color: var(--lt-body-background);
+  border-radius: 15px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.stats-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.stats-container > p {
+  margin: 0.5rem 1rem;
+}
+
+.user-links {
+  margin: 0 2rem 2rem 2rem;
+}
+
+.location,
+.twitter,
+.website,
+.org {
+  margin: 1rem;
+}
+
+.space-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
 }
 
 .hide {
   display: none;
+}
+
+.attribution {
+  max-width: 17rem;
+}
+
+.attribution a {
+  color: var(--lt-text-purple-grey);
 }
 /* ========================= Media Queries ========================= */
 

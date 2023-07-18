@@ -23,12 +23,12 @@
   <body class="lt-body-background">
     <header class="lt-body-background">
       <h1 class="lt-header">devfinder</h1>
-      <div class="mode-wrapper">
-        <p class="hide light-mode-option">Light</p>
-        <img src="./assets/icon-sun.svg" alt="" class="hide sun mode-icon" />
+      <div class="hide mode-wrapper" id="light-mode-option">
+        <p class="light-mode-option">Light</p>
+        <img src="./assets/icon-sun.svg" alt="" class="sun mode-icon" />
       </div>
 
-      <div class="mode-wrapper">
+      <div class="mode-wrapper" id="dark-mode-option">
         <p class="dark-mode-option">Dark</p>
         <img src="./assets/icon-moon.svg" alt="" class="moon mode-icon" />
       </div>
@@ -41,7 +41,7 @@
           class="search"
           placeholder="Search GitHub username... "
         />
-        <button>Search</button>
+        <button class="btn-search">Search</button>
       </div>
 
       <div class="user-info-container">
@@ -56,34 +56,41 @@
             that is Octocat!
           </p>
         </div>
-      </div>
-      <div class="user-stats">
-        <p class="repos">Repos</p>
-        <p class="number">8</p>
-        <p class="followers">Followers</p>
-        <p class="number">3938</p>
-        <p class="following">Following</p>
-        <p class="number">9</p>
-      </div>
-      <div class="user-links">
-        <div class="location-wrapper">
-          <img src="./assets/icon-location.svg" alt="" />
-          <p class="location">San Francisco</p>
-        </div>
 
-        <div class="twitter-wrapper">
-          <img src="./assets/icon-twitter.svg" alt="" />
-          <a href="" class="twitter">Not Available</a>
+        <div class="user-stats">
+          <div class="stats-container">
+            <p class="repos">Repos</p>
+            <p class="number">8</p>
+          </div>
+          <div class="stats-container">
+            <p class="followers">Followers</p>
+            <p class="number">3938</p>
+          </div>
+          <div class="stats-container">
+            <p class="following">Following</p>
+            <p class="number">9</p>
+          </div>
         </div>
+        <div class="user-links">
+          <div class="location-wrapper space-row">
+            <img src="./assets/icon-location.svg" alt="" />
+            <p class="location">San Francisco</p>
+          </div>
 
-        <div class="website-wrapper">
-          <img src="./assets/icon-website.svg" alt="" />
-          <a href="" class="website">https://github.blog</a>
-        </div>
+          <div class="twitter-wrapper space-row">
+            <img src="./assets/icon-twitter.svg" alt="" />
+            <a href="" class="twitter">Not Available</a>
+          </div>
 
-        <div class="org-wrapper">
-          <img src="./assets/icon-company.svg" alt="" />
-          <a href="" class="org">@github</a>
+          <div class="website-wrapper space-row">
+            <img src="./assets/icon-website.svg" alt="" />
+            <a href="" class="website">https://github.blog</a>
+          </div>
+
+          <div class="org-wrapper space-row">
+            <img src="./assets/icon-company.svg" alt="" />
+            <a href="" class="org">@github</a>
+          </div>
         </div>
       </div>
     </main>
