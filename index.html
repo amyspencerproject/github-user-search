@@ -20,17 +20,21 @@
 
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
-  <body>
-    <header>
-      <h1>devfinder</h1>
-      <p class="light-mode">Light</p>
-      <img src="./assets/icon-sun.svg" alt="" class="sun" />
+  <body class="lt-body-background">
+    <header class="lt-body-background">
+      <h1 class="lt-header">devfinder</h1>
+      <div class="mode-wrapper">
+        <p class="hide light-mode-option">Light</p>
+        <img src="./assets/icon-sun.svg" alt="" class="hide sun mode-icon" />
+      </div>
 
-      <p class="dark-mode">Dark</p>
-      <img src="./assets/icon-moon.svg" alt="" class="moon" />
+      <div class="mode-wrapper">
+        <p class="dark-mode-option">Dark</p>
+        <img src="./assets/icon-moon.svg" alt="" class="moon mode-icon" />
+      </div>
     </header>
     <main>
-      <div class="search-container">
+      <div class="search-container lt-background">
         <img src="./assets/icon-search.svg" alt="" class="search-icon" />
         <input
           type="text"
@@ -39,6 +43,7 @@
         />
         <button>Search</button>
       </div>
+
       <div class="user-info-container">
         <img src="" alt="" class="user-avatar" />
         <div class="user-profile">
@@ -82,5 +87,16 @@
         </div>
       </div>
     </main>
+    <footer class="lt-body-background">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/amyspencerproject"
+          >Amy Spencer</a
+        >.
+      </p>
+    </footer>
   </body>
 </html>

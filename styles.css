@@ -78,10 +78,89 @@ select {
 
 /* ======= Variables ======= */
 
+:root {
+  --lt-body-background: hsl(227, 100%, 98%);
+  --lt-background: hsl(0, 0%, 100%);
+  --lt-shadow: hsla(227, 46%, 50%, 19.86%);
+  --lt-text-grey: hsl(217, 20%, 51%);
+  --lt-text-purple-grey: hsl(217, 35%, 45%);
+  --lt-text-dark: hsl(217, 21%, 21%);
+  --lt-active-text-dark: hsl(220, 18%, 16%);
+  --btn-blue: hsl(212, 100%, 50%);
+  --btn-active-blue: hsl(212, 100%, 69%);
+  --chiocciola-text-blue: hsl(212, 100%, 50%);
+  --drk-body-background: hsl(220, 40%, 13%);
+  --drk-background: hsl(220, 41%, 20%);
+  --drk-text: hsl(0, 0%, 100%);
+  --error-text: hsl(0, 92%, 62%);
+  --drk-active-text-blue: hsl(222, 44%, 70%);
+}
+
 body {
   font-family: "Space Mono", monospace;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+}
+
+/* ========================= Dark Mode ========================= */
+.dark-background {
+  background-color: var(--drk-body-background);
+}
+
+/* ========================= Light Mode ========================= */
+
+.lt-body-background {
+  background-color: var(--lt-body-background);
+}
+
+.dark-mode-option {
+  color: var(--lt-text-purple-grey);
+}
+
+.lt-background {
+  background-color: var(--lt-background);
+  /* box-shadow: 0, 13px, 16px, -10px, black; */
+  box-shadow: 0px 13px 16px -10px var(--lt-shadow);
+}
+
+.lt-header {
+  color: var(--lt-text-dark);
+}
+
+/* ========================= Base Styles ========================= */
+.mode-wrapper {
+  display: flex;
+}
+.mode-icon {
+  object-fit: contain;
+}
+
+.search-icon {
+  object-fit: contain;
+}
+.search-container {
+  display: flex;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.hide {
+  display: none;
+}
 /* ========================= Media Queries ========================= */
 
 /* tablet change at 640px */
