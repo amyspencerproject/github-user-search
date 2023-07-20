@@ -96,36 +96,50 @@ select {
   --drk-active-text-blue: hsl(222, 44%, 70%);
 }
 
+/* ========================= Base Styles ========================= */
+
 body {
   font-family: "Space Mono", monospace;
 }
 
+main {
+}
+
+/* ============ Header ============  */
+
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-main {
+.light-mode-option,
+.dark-mode-option {
+  font-size: 0.8125rem;
+  letter-spacing: 2.25px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mode-wrapper {
   display: flex;
-  flex-flow: column wrap;
   align-items: center;
-  /* justify-content: center; */
+  margin-right: 1.5rem;
+}
+.mode-icon {
+  margin: 1rem;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 10rem;
-  font-size: 0.875rem;
+h1 {
+  font-size: 1.625rem;
+  margin: 1rem 0 1rem 1.5rem;
 }
 
-/* ========================= Dark Mode ========================= */
+/* ======= Dark Mode ======= */
 .dark-background {
   background-color: var(--drk-body-background);
 }
 
-/* ========================= Light Mode ========================= */
+/* ======= Light Mode ======= */
 
 .lt-body-background {
   background-color: var(--lt-body-background);
@@ -137,7 +151,6 @@ footer {
 
 .lt-background {
   background-color: var(--lt-background);
-  /* box-shadow: 0, 13px, 16px, -10px, black; */
   box-shadow: 0px 13px 16px -10px var(--lt-shadow);
 }
 
@@ -145,36 +158,58 @@ footer {
   color: var(--lt-text-dark);
 }
 
-/* ========================= Base Styles ========================= */
-
-.lt-header {
-  margin: 1rem;
-}
-
-.mode-wrapper {
-  display: flex;
-  align-items: center;
-}
-.mode-icon {
-  margin: 1rem;
-}
+/* ============ Search Bar ============ */
 
 .search-icon {
   object-fit: contain;
-  margin: 1rem;
+  margin: 1rem 0 1rem 0.5rem;
 }
 .search-container {
   display: flex;
-  padding: 1rem 3rem;
+  align-items: center;
+  margin: 1rem 1.5rem;
   border-radius: 15px;
+  position: relative;
 }
 
 .search {
-  margin: 0.5rem;
+  border: none;
+
+  /* margin: 0.5rem; */
+}
+
+.search::placeholder {
+  font-size: 0.8125rem;
 }
 
 .btn-search {
+  background-color: var(--btn-blue);
+  color: var(--lt-background);
+  border: none;
+  border-radius: 10px;
   margin: 0.5rem;
+  width: 5.25rem;
+  padding: 0.5rem 0;
+  position: absolute;
+  /* right: -1%; */
+  left: 70%;
+}
+
+/* ============ User Profile ============ */
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--btn-blue);
+  font-weight: normal;
+}
+h4 {
+  font-size: 0.9375rem;
+  font-weight: normal;
+  color: var(--lt-text-grey);
 }
 
 .user-info-container {
@@ -182,28 +217,53 @@ footer {
   border-radius: 15px;
   display: flex;
   flex-flow: column wrap;
-  margin: 2rem 3rem;
+  margin: 1.25rem 1.5rem;
 }
 
 .user-profile {
   display: flex;
-  flex-flow: column wrap;
-  margin: 1rem 2rem;
+  flex-flow: row nowrap;
+  /* align-items: flex-start; */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.user-avatar {
+  width: 25%;
+  margin-left: 0.5rem;
+}
+
+.user-profile-text {
 }
 
 .user-profile > h2,
 h3,
-h4,
-p {
+h4 {
   margin: 0.5rem 0;
 }
 
+.user-bio {
+  margin: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--lt-text-grey);
+}
+
+/* ============ User stats ============ */
 .user-stats {
   display: flex;
+  justify-content: space-evenly;
   background-color: var(--lt-body-background);
   border-radius: 15px;
-  margin: 2rem;
-  padding: 2rem;
+  color: var(--lt-text-grey);
+  font-size: 0.6875rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.number {
+  color: var(--lt-text-dark);
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .stats-container {
@@ -217,28 +277,38 @@ p {
 }
 
 .user-links {
-  margin: 0 2rem 2rem 2rem;
+  font-size: 0.8125rem;
+  margin-bottom: 2rem;
 }
 
 .location,
 .twitter,
 .website,
 .org {
-  margin: 1rem;
+  margin: 0.5rem;
+  color: var(--lt-text-grey);
+  text-decoration: none;
 }
 
 .space-row {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: start;
   align-items: center;
-  width: 100%;
+  gap: 0.5rem;
+  margin-left: 1rem;
 }
 
 .hide {
   display: none;
 }
 
+/* ============ Footer ============ */
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 0.875rem;
+}
 .attribution {
   max-width: 17rem;
 }
@@ -250,6 +320,12 @@ p {
 
 /* tablet change at 640px */
 @media screen and (min-width: 40rem) {
+  .user-stats {
+    font-size: 0.8125rem;
+  }
+  .number {
+    font-size: 1.375rem;
+  }
 }
 
 /* desktop change at 960px */

@@ -54,18 +54,18 @@ The GitHub users API endpoint is `https://api.github.com/users/:username`. So, i
 
 - Semantic HTML5 markup
 - CSS Variables
-- CSS Grid
+- CSS Flex
 - Mobile-first workflow
 
 ### What I learned
 
--
+- Working with Figma design files it is easy to just go with hex codes. I debated wether to stick with the hex or use hsl. For this challenge I went with hsl and hsla. I read an article by Josh Comeau about how hsl is actually more intuitive and how easily you can make changes to a hsl. If you were savvy enough you could just adjust the satuation and get a lighter or darker version with out going thru what I do with hex codes.
 
 ### Continued development
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Case using for hsl()](https://www.joshwcomeau.com/css/color-formats/#hsl-4) - Article by Josh Comeau about all the different color formats.
 
 ## Author
 
