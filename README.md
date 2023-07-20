@@ -23,12 +23,16 @@ Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Search for GitHub users by their username
+- Search for GitHub users by their username using the [GitHub User API](https://docs.github.com/en/rest/users?apiVersion=2022-11-28#get-a-user)
 - See relevant user information based on their search
 - Switch between light and dark themes
 - **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 The GitHub users API endpoint is `https://api.github.com/users/:username`. So, if you wanted to search for the Octocat profile, you'd be able to make a request to `https://api.github.com/users/octocat`.
+
+https://api.github.com/users/:${string}
+https://api.github.com/users/${string}
+https://api.github.com/users/octocat
 
 ### Expected behaviour
 
