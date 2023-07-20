@@ -10,34 +10,48 @@ const searchString = document.getElementById("search-input");
 
 searchButton.addEventListener("click", (e) => {
   e.preventDefault(); //stop page from refreshing
-  const string = searchString.value;
-  getUser(string);
+  const usernameString = searchString.value;
+  let stringValid = inputValidator(usernameString);
+  console.log(stringValid);
 
-  let stringValid = inputValidator(string);
-  // console.log(stringValid);
-  // stringValid is undefined. I was thinking it would be a boolean??
-
-  if (stringValid == true) {
-    console.log("TRUTH");
-    // getUser(string);
+  if (typeof stringValid === "string") {
+    getUser(usernameString);
   }
 });
 
 //validate the search string
-const inputValidator = function (string) {
+const inputValidator = function (usernameString) {
   const acceptedInput = /[a-zA-Z0-9]/;
 
-  if (!string.match(acceptedInput)) {
+  if (!usernameString.match(acceptedInput)) {
     console.log("Invalid input!");
     // userMessage.innerText = "";
+  } else {
+    console.log("Valid Input ❤️");
+    return usernameString;
   }
 };
 
 //API call
-const getUser = async function (string) {
-  console.log(`${string}`);
-  const response = await fetch(`https://api.github.com/users/${string}`);
-  // const response = await fetch("https://api.github.com/users/octocat");
+const getUser = async function (usernameString) {
+  const response = await fetch(
+    `https://api.github.com/users/${usernameString}`
+  );
   const data = await response.json();
   console.log(data);
+
+  const avatar = data.avatar_url;
+  const name = data.name;
+  const handle = data.login;
+  const join = data.created_at;
+  const bio = data.bio;
+  const repos = data.public_repos;
+  const followers = data.followers;
+  const following = data.following;
+  const location = data.location;
+  const website = data.blog;
+  const twitter = data.twitter_username;
+  const organization = data.company;
+
+  console.log(website);
 };

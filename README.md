@@ -30,9 +30,7 @@ Users should be able to:
 
 The GitHub users API endpoint is `https://api.github.com/users/:username`. So, if you wanted to search for the Octocat profile, you'd be able to make a request to `https://api.github.com/users/octocat`.
 
-https://api.github.com/users/:${string}
-https://api.github.com/users/${string}
-https://api.github.com/users/octocat
+const response = await fetch("https://api.github.com/users/octocat");
 
 ### Expected behaviour
 
@@ -70,6 +68,7 @@ https://api.github.com/users/octocat
 ### Useful resources
 
 - [Case using for hsl()](https://www.joshwcomeau.com/css/color-formats/#hsl-4) - Article by Josh Comeau about all the different color formats.
+- [GitHub User API](https://docs.github.com/en/rest/users?apiVersion=2022-11-28#get-a-user) - Documentation for Github API
 
 ## Author
 
