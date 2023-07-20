@@ -11,13 +11,15 @@ const searchString = document.getElementById("search-input");
 searchButton.addEventListener("click", (e) => {
   e.preventDefault(); //stop page from refreshing
   const string = searchString.value;
-  console.log("Something worked! 🚀");
+  getUser(string);
 
   let stringValid = inputValidator(string);
+  // console.log(stringValid);
+  // stringValid is undefined. I was thinking it would be a boolean??
 
-  if ((stringValid = true)) {
+  if (stringValid == true) {
     console.log("TRUTH");
-    getUser(string);
+    // getUser(string);
   }
 });
 
@@ -32,10 +34,9 @@ const inputValidator = function (string) {
 };
 
 //API call
-const getUser = async function () {
-  console.log("Something else worked! 🚀");
-  // console.log(string);
-  const response = await fetch("https://api.github.com/users/${string}");
+const getUser = async function (string) {
+  console.log(`${string}`);
+  const response = await fetch(`https://api.github.com/users/${string}`);
   // const response = await fetch("https://api.github.com/users/octocat");
   const data = await response.json();
   console.log(data);
