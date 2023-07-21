@@ -63,12 +63,15 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 - Working with Figma design files it is easy to just go with hex codes. I debated wether to stick with the hex or use hsl. For this challenge I went with hsl and hsla. I read an article by Josh Comeau about how hsl is actually more intuitive and how easily you can make changes to a hsl. If you were savvy enough you could just adjust the satuation and get a lighter or darker version with out going thru what I do with hex codes.
 
+- I asssumed that the light to dark mode toggle would be a button with an `event listener`. To my surprise I was able to make a toggle with just a JS function that is called inside of the html with `onclick=""`. This is my first time making a light to dark mode toggle with only JS. Previously I done this with React.
+
 ### Continued development
 
 ### Useful resources
 
 - [Case using for hsl()](https://www.joshwcomeau.com/css/color-formats/#hsl-4) - Article by Josh Comeau about all the different color formats.
 - [GitHub User API](https://docs.github.com/en/rest/users?apiVersion=2022-11-28#get-a-user) - Documentation for Github API
+- [Toggle for dark mode](https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp) - the function you put in the `onclick` attribute comes from whatever script files you have imported into the html file.
 
 ## Author
 

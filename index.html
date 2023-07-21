@@ -24,12 +24,18 @@
     <header class="lt-body-background">
       <h1 class="lt-header">devfinder</h1>
       <div class="hide mode-wrapper" id="light-mode-option">
-        <p class="light-mode-option">Light</p>
+        <button id="mode-button" class="light-mode-option">Light</button>
         <img src="./assets/icon-sun.svg" alt="" class="sun mode-icon" />
       </div>
 
       <div class="mode-wrapper" id="dark-mode-option">
-        <p class="dark-mode-option">Dark</p>
+        <button
+          id="mode-button"
+          class="dark-mode-option"
+          onclick="modeSwitch()"
+        >
+          Dark
+        </button>
         <img src="./assets/icon-moon.svg" alt="" class="moon mode-icon" />
       </div>
     </header>
@@ -108,6 +114,7 @@
         >.
       </p>
     </footer>
+    <script src="./javascript/lt-drk-mode.js"></script>
     <script src="./javascript/get-user.js"></script>
   </body>
 </html>

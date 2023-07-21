@@ -125,17 +125,12 @@ header {
   margin-right: 1.5rem;
 }
 .mode-icon {
-  margin: 1rem;
+  margin: 1rem 0.5rem;
 }
 
 h1 {
   font-size: 1.625rem;
   margin: 1rem 0 1rem 1.5rem;
-}
-
-/* ======= Dark Mode ======= */
-.dark-background {
-  background-color: var(--drk-body-background);
 }
 
 /* ======= Light Mode ======= */
@@ -146,6 +141,8 @@ h1 {
 
 .dark-mode-option {
   color: var(--lt-text-purple-grey);
+  background-color: var(--lt-body-background);
+  border: none;
 }
 
 .lt-background {
@@ -155,6 +152,19 @@ h1 {
 
 .lt-header {
   color: var(--lt-text-dark);
+}
+
+/* ======= Dark Mode ======= */
+.drk-body-background {
+  background-color: var(--drk-body-background);
+}
+
+.drk-background {
+  background-color: var(--drk-background);
+}
+
+.drk-mode-on {
+  color: var(--drk-text);
 }
 
 /* ============ Search Bar ============ */
@@ -182,7 +192,7 @@ h1 {
 
 .btn-search {
   background-color: var(--btn-blue);
-  color: var(--lt-background);
+  color: var(--drk-text);
   border: none;
   border-radius: 10px;
   margin: 0.5rem;
