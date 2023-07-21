@@ -390,4 +390,41 @@ footer {
   .user-info-container {
     max-width: 45.625rem;
   }
+
+  .user-profile,
+  .user-bio,
+  .user-stats,
+  .user-links {
+    margin-left: 12rem;
+  }
+
+  .user-profile {
+    position: relative;
+  }
+
+  .user-avatar {
+    position: absolute;
+    left: -33%;
+    margin: 0;
+  }
+
+  .user-profile-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .user-name {
+    grid-column: 1 / -1;
+    grid-row: 1/ 2;
+  }
+
+  .user-handle {
+    grid-column: 1 /2;
+  }
+
+  .user-join {
+    grid-column: 2 / -1;
+    grid-row: 1/ 2;
+    margin-left: 4.5rem;
+  }
 }
