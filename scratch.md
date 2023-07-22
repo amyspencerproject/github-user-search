@@ -14,3 +14,5 @@ user-links each <p> font-color
 user-links each icon color
 footer background font color
 attribution a font color
+
+classList.toggle("drk-mode-on");
