@@ -23,21 +23,25 @@
   <body class="body-background">
     <header class="body-background">
       <h1 class="comapny-name-header">devfinder</h1>
-      <div class="hide mode-wrapper" id="light-mode-option">
-        <button id="mode-button" class="light-mode-option">Light</button>
-        <img src="./assets/icon-sun.svg" alt="" class="sun mode-icon" />
-      </div>
 
-      <div class="mode-wrapper" id="dark-mode-option">
-        <button
-          id="mode-button"
-          class="dark-mode-option"
-          onclick="modeSwitch()"
-        >
-          Dark
-        </button>
-        <img src="./assets/icon-moon.svg" alt="" class="moon mode-icon" />
-      </div>
+      <form class="mode-wrapper" id="">
+        <fieldset class="theme-switch">
+          <div class="label-group">
+            <input type="radio" id="dark-mode" name="" value="dark" checked />
+            <label id="mode-button" class="dark-mode-option" for="dark-mode"
+              >Dark
+              <img src="./assets/icon-moon.svg" alt="" class="moon mode-icon" />
+            </label>
+          </div>
+          <div class="label-group">
+            <input type="radio" id="light-mode" name="" value="light" checked />
+            <label id="mode-button" class="light-mode-option" for="light-mode"
+              >Light
+              <img src="./assets/icon-sun.svg" alt="" class="sun mode-icon" />
+            </label>
+          </div>
+        </fieldset>
+      </form>
     </header>
     <main>
       <div class="search-container section-background">

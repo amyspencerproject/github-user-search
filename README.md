@@ -65,6 +65,12 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 - I asssumed that the light to dark mode toggle would be a button with an `event listener`. To my surprise I was able to make a toggle with just a JS function that is called inside of the html with `onclick=""`. This is my first time making a light to dark mode toggle with only JS. Previously I done this with React.
 
+- Using `onclick=` in the HTML did not work! I could only select IDs and elements not classes when using this method. I asked on FEM's Dicord for advice and changed my plan. Using an event listener is better because everything is more flexible. You can add more that one event listener to an html element. You can remove event listeners easily in the future. There is better separation fo concerns by keeping the JS code seperated from the HTML.
+
+- Further advice was to use radio buttons as a toggle for themes. Again this makes it easier to add different themes or more themes in the future.
+
+- Last bit of advice was to build a themes in css and them apply it to root element as an attribute instead of applying theme to each individual item.
+
 ### Continued development
 
 ### Useful resources

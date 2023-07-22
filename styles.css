@@ -117,8 +117,32 @@ header {
   margin: 1rem 0 1rem 1.5rem;
 }
 
+.theme-switch {
+  border: none;
+  display: grid;
+}
+.label-group {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.label-group > input,
+.label-group > label {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.label-group > input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .light-mode-option,
 .dark-mode-option {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   font-size: 0.8125rem;
   letter-spacing: 2.25px;
   font-weight: 700;
@@ -126,8 +150,6 @@ header {
 }
 
 .mode-wrapper {
-  display: flex;
-  align-items: center;
   margin-right: 1.5rem;
 }
 .mode-icon {
