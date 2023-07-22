@@ -78,41 +78,53 @@ select {
 
 /* ======= Variables ======= */
 
-:root {
-  --lt-body-background: hsl(227, 100%, 98%);
-  --lt-background: hsl(0, 0%, 100%);
-  --lt-shadow: hsla(227, 46%, 50%, 19.86%);
-  --lt-text-grey: hsl(217, 20%, 51%);
-  --lt-text-purple-grey: hsl(217, 35%, 45%);
-  --lt-text-dark: hsl(217, 21%, 21%);
-  --lt-active-text-dark: hsl(220, 18%, 16%);
+:root,
+[data-theme="light"] {
+  --primary: #697c9a;
+  --secondary: #4b6a9b;
+  --header: #2b3442;
+  --background-body: #f6f8ff;
+  --background-section: #fefefe;
+  --section-shadow: hsla(227, 46%, 50%, 19.86%);
+
   --btn-blue: hsl(212, 100%, 50%);
   --btn-active-blue: hsl(212, 100%, 69%);
+  --btn-text: #ffffff;
   --chiocciola-text-blue: hsl(212, 100%, 50%);
-  --drk-body-background: hsl(220, 40%, 13%);
-  --drk-background: hsl(220, 41%, 20%);
-  --drk-text: hsl(0, 0%, 100%);
   --error-text: hsl(0, 92%, 62%);
   --drk-active-text-blue: hsl(222, 44%, 70%);
+}
+
+[data-theme="dark"] {
+  --primary: #ffffff;
+  --secondary: #ffffff;
+  --header: #ffffff;
+  --background-body: #141d2f;
+  --background-section: #1e2a47;
+  --section-shadow: #141d2f;
 }
 
 /* ========================= Base Styles ========================= */
 
 body {
+  background-color: var(--background-body);
+  color: var(--primary);
+  font-family: "Space Mono", monospace;
   display: grid;
   place-content: center;
-  font-family: "Space Mono", monospace;
 }
 
 /* ============ Header ============  */
 
 header {
+  background-color: var(--background-body);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .comapny-name-header {
-  color: var(--lt-text-dark);
+  color: var(--header);
   font-size: 1.625rem;
   margin: 1rem 0 1rem 1.5rem;
 }
@@ -122,6 +134,7 @@ header {
   display: grid;
 }
 .label-group {
+  color: var(--secondary);
   display: grid;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
@@ -147,6 +160,10 @@ header {
   letter-spacing: 2.25px;
   font-weight: 700;
   text-transform: uppercase;
+
+  color: var(--secondary);
+  background-color: var(--background-body);
+  border: none;
 }
 
 .mode-wrapper {
@@ -157,21 +174,6 @@ header {
 }
 
 /* ======= Light Mode ======= */
-
-.body-background {
-  background-color: var(--lt-body-background);
-}
-
-.dark-mode-option {
-  color: var(--lt-text-purple-grey);
-  background-color: var(--lt-body-background);
-  border: none;
-}
-
-.section-background {
-  background-color: var(--lt-background);
-  box-shadow: 0px 13px 16px -10px var(--lt-shadow);
-}
 
 /* ======= Dark Mode ======= */
 .drk-body-background {
@@ -187,6 +189,11 @@ header {
 }
 
 /* ============ Search Bar ============ */
+
+.section-background {
+  background-color: var(--background-section);
+  box-shadow: 0px 13px 16px -10px var(--section-shadow);
+}
 
 .search-icon {
   object-fit: contain;
@@ -211,7 +218,7 @@ header {
 
 .btn-search {
   background-color: var(--btn-blue);
-  color: var(--drk-text);
+  color: var(--btn-text);
   border: none;
   border-radius: 10px;
   margin: 0.5rem;
@@ -225,22 +232,22 @@ header {
 /* ============ User Profile ============ */
 
 h2 {
+  color: var(--header);
   font-size: 1rem;
 }
 
 h3 {
   font-size: 1rem;
-  color: var(--btn-blue);
+  color: var(--chiocciola-text-blue);
   font-weight: normal;
 }
 h4 {
   font-size: 0.9375rem;
   font-weight: normal;
-  color: var(--lt-text-grey);
+  color: var(--primary);
 }
 
 .user-info-container {
-  background-color: var(--lt-background);
   border-radius: 15px;
   display: flex;
   flex-flow: column wrap;
@@ -269,23 +276,24 @@ h4 {
 .user-bio {
   margin: 0.5rem 1rem;
   font-size: 0.8125rem;
-  color: var(--lt-text-grey);
+  color: var(--secondary);
+  line-height: 1.92;
 }
 
 /* ============ User stats ============ */
 .user-stats {
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--lt-body-background);
+  background-color: var(--background-body);
   border-radius: 15px;
-  color: var(--lt-text-grey);
+  color: var(--secondary);
   font-size: 0.6875rem;
   margin: 1rem;
   padding: 1rem;
 }
 
 .number {
-  color: var(--lt-text-dark);
+  color: var(--header);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -310,7 +318,7 @@ h4 {
 .website,
 .org {
   margin: 0.5rem;
-  color: var(--lt-text-grey);
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -332,13 +340,14 @@ footer {
   justify-content: center;
   margin-top: 5rem;
   font-size: 0.875rem;
+  background-color: var(--background-body);
 }
 .attribution {
   max-width: 17rem;
 }
 
 .attribution a {
-  color: var(--lt-text-purple-grey);
+  color: var(--chiocciola-text-blue);
 }
 /* ========================= Media Queries ========================= */
 
