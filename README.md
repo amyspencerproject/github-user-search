@@ -69,7 +69,7 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 - Further advice was to use radio buttons as a toggle for themes. Again this makes it easier to add different themes or more themes in the future.
 
-- Last bit of advice was to build a themes in css and them apply it to root element as an attribute instead of applying theme to each individual item.
+- Last bit of advice was to build a themes in css and then apply it to root element as an attribute instead of applying theme to each individual item.
 
 ### Continued development
 

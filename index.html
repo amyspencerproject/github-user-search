@@ -26,16 +26,21 @@
 
       <form class="mode-wrapper" id="">
         <fieldset class="theme-switch">
-          <div class="label-group">
-            <input type="radio" id="dark-mode" name="" value="dark" checked />
-            <label id="mode-button" class="dark-mode-option" for="dark-mode"
+          <div id="dark-label-group" class="label-group">
+            <input type="radio" id="dark-mode" name="dark-mode" value="dark" />
+            <label class="dark-mode-option" for="dark-mode"
               >Dark
               <img src="./assets/icon-moon.svg" alt="" class="moon mode-icon" />
             </label>
           </div>
-          <div class="hide label-group">
-            <input type="radio" id="light-mode" name="" value="light" checked />
-            <label id="mode-button" class="light-mode-option" for="light-mode"
+          <div id="light-label-group" class="hide label-group">
+            <input
+              type="radio"
+              id="light-mode"
+              name="light-mode"
+              value="light"
+            />
+            <label class="light-mode-option" for="light-mode"
               >Light
               <img src="./assets/icon-sun.svg" alt="" class="sun mode-icon" />
             </label>

@@ -1,27 +1,50 @@
-// Elements that make the mode toggle in the header
-const darkOption = document.getElementById("dark-mode-option");
-const lightOption = document.getElementById("light-mode-option");
-const button = document.getElementById("mode-button");
+const label = document.querySelector("label");
+const darkMode = document.getElementById("dark-label-group");
+const lightMode = document.getElementById("light-label-group");
 
-// All the elements that need styles added for dark-mode
-const body = document.querySelector("body");
-const header = document.querySelector("header");
-const companyName = document.querySelector("h1");
-const searchContainer = document.querySelector("search-container");
-const searchInput = document.querySelector("search");
+darkMode.addEventListener("click", function (e) {
+  e.preventDefault();
+  // console.log(darkModeInput);
+  document.documentElement.setAttribute("data-theme", "dark");
+  darkMode.classList.add("hide");
+  lightMode.classList.remove("hide");
+  // console.log(lightModeInput);
+});
 
-// used this function in html as "onclick" attribute
-modeSwitch = () => {
-  body.classList.toggle("drk-body-background");
-  header.classList.toggle("drk-body-background");
-  companyName.classList.toggle("drk-mode-on");
-  //   Three above work because selector is on an element
+lightMode.addEventListener("click", function (e) {
+  e.preventDefault();
+  document.documentElement.setAttribute("data-theme", "light");
+  darkMode.classList.remove("hide");
+  lightMode.classList.add("hide");
+});
 
-  //  Using an ID works. I think I will need an aria=true/false toggle here??
-  darkOption.classList.toggle("hide");
-  lightOption.classList.toggle("hide");
+// ===================== trying to use input and input:checked =====================
+// +++++ not specific to radio buttons but will catch all imputs
+// const input = document.querySelectorAll("input");
 
-  // These two do not work because selector is on a class and you are trying to toggle a class
-  searchContainer.classList.add("drk-body-background");
-  searchInput.classList.toggle("drk-mode-on");
-};
+// +++++ Must change name="mode" on input div to use this
+// const modeInput = document.getElementsByName("mode");
+
+// const darkModeInput = document.getElementsByName("dark-mode");
+// const lightModeInput = document.getElementsByName("light-mode");
+
+// ++++ classes on the label div
+// const darkModeLabel = document.querySelector("dark-mode-option");
+// const lightModeLabel = document.querySelector("light-mode-option");
+
+// label.addEventListener("click", function (e) {
+//   if (darkModeInput.checked) {
+//     document.documentElement.setAttribute("data-theme", "dark");
+//     darkMode.classList.add("hide");
+//     lightMode.classList.remove("hide");
+//   } else {
+//     document.documentElement.setAttribute("data-theme", "light");
+//     darkMode.classList.remove("hide");
+//     lightMode.classList.add("hide");
+//   }
+// });
+
+// input.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   console.log(modeInput);
+// });

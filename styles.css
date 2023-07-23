@@ -140,8 +140,12 @@ header {
   grid-row: 1 / -1;
 }
 
-.label-group > input,
 .label-group > label {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.label-group > input {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
 }
@@ -208,12 +212,16 @@ header {
 }
 
 .search {
+  background-color: var(--background-section);
+  color: var(--primary);
   border: none;
+  flex-grow: 2;
   margin: 0.5rem;
 }
 
 .search::placeholder {
   font-size: 0.8125rem;
+  color: var(--primary);
 }
 
 .btn-search {
