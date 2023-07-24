@@ -99,7 +99,7 @@ select {
 [data-theme="dark"] {
   --primary: #ffffff;
   --secondary: #ffffff;
-  --secondary-hoover: #90a4d4;
+  --secondary-hover: #90a4d4;
   --header: #ffffff;
   --background-body: #141d2f;
   --background-section: #1e2a47;
@@ -134,9 +134,15 @@ header {
 .theme-switch {
   border: none;
   display: grid;
+  color: var(--secondary);
+  fill: var(--secondary);
+}
+
+.theme-switch:hover {
+  color: var(--secondary-hover);
+  fill: var(--secondary-hover);
 }
 .label-group {
-  color: var(--secondary);
   display: grid;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
@@ -166,15 +172,8 @@ header {
   letter-spacing: 2.25px;
   font-weight: 700;
   text-transform: uppercase;
-
-  color: var(--secondary);
   background-color: var(--background-body);
   border: none;
-}
-
-.dark-mode-option:hover,
-.light-mode-option:hover {
-  color: var(--secondary-hover);
 }
 
 .mode-wrapper {
@@ -182,14 +181,6 @@ header {
 }
 .mode-icon {
   margin: 1rem 0.5rem;
-}
-
-.mode-icon {
-  fill: var(--secondary);
-}
-
-.mode-icon:hover {
-  fill: var(--secondary-hover);
 }
 
 /* ============ Search Bar ============ */

@@ -16,3 +16,16 @@ footer background font color
 attribution a font color
 
 classList.toggle("drk-mode-on");
+
+// console.log(avatar);
+// console.log(name);
+// console.log(handle);
+// console.log(join);
+// console.log(bio);
+// console.log(repos);
+// console.log(followers);
+// console.log(following);
+// console.log(location);
+// console.log(website);
+// console.log(twitter);
+// console.log(organization);
