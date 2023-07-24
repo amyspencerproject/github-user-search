@@ -82,6 +82,7 @@ select {
 [data-theme="light"] {
   --primary: #697c9a;
   --secondary: #4b6a9b;
+  --secondary-hover: #2b3442;
   --header: #2b3442;
   --background-body: #f6f8ff;
   --background-section: #fefefe;
@@ -98,6 +99,7 @@ select {
 [data-theme="dark"] {
   --primary: #ffffff;
   --secondary: #ffffff;
+  --secondary-hoover: #90a4d4;
   --header: #ffffff;
   --background-body: #141d2f;
   --background-section: #1e2a47;
@@ -170,6 +172,11 @@ header {
   border: none;
 }
 
+.dark-mode-option:hover,
+.light-mode-option:hover {
+  color: var(--secondary-hover);
+}
+
 .mode-wrapper {
   margin-right: 1.5rem;
 }
@@ -177,19 +184,12 @@ header {
   margin: 1rem 0.5rem;
 }
 
-/* ======= Light Mode ======= */
-
-/* ======= Dark Mode ======= */
-.drk-body-background {
-  background-color: var(--drk-body-background);
+.mode-icon {
+  fill: var(--secondary);
 }
 
-.drk-background {
-  background-color: var(--drk-background);
-}
-
-.drk-mode-on {
-  color: var(--drk-text) !important;
+.mode-icon:hover {
+  fill: var(--secondary-hover);
 }
 
 /* ============ Search Bar ============ */
@@ -235,6 +235,10 @@ header {
   position: absolute;
   /* right: -1%; */
   left: 70%;
+}
+
+.btn-search:hover {
+  background-color: var(--btn-active-blue);
 }
 
 /* ============ User Profile ============ */
@@ -319,6 +323,10 @@ h4 {
 .user-links {
   font-size: 0.8125rem;
   margin-bottom: 2rem;
+}
+
+.user-links a:hover {
+  text-decoration: underline;
 }
 
 .location,

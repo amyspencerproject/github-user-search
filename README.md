@@ -78,6 +78,8 @@ const response = await fetch("https://api.github.com/users/octocat");
 - [Case using for hsl()](https://www.joshwcomeau.com/css/color-formats/#hsl-4) - Article by Josh Comeau about all the different color formats.
 - [GitHub User API](https://docs.github.com/en/rest/users?apiVersion=2022-11-28#get-a-user) - Documentation for Github API
 - [Toggle for dark mode](https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp) - the function you put in the `onclick` attribute comes from whatever script files you have imported into the html file.
+- [Dark Mode theme with CSS variables](https://lukelowrey.com/css-variable-theme-switcher/)
+- [Event Listener on Radio Buttons](https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)
 
 ## Author
 
