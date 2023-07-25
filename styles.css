@@ -215,6 +215,14 @@ header {
   color: var(--primary);
 }
 
+.user-message {
+  color: var(--error-text);
+  font-size: 0.675rem;
+  text-align: left;
+  position: absolute;
+  left: 30%;
+}
+
 .btn-search {
   background-color: var(--btn-blue);
   color: var(--btn-text);

@@ -1,10 +1,18 @@
 const searchButton = document.getElementById("search-button");
 const searchString = document.getElementById("search-input");
+const userMessage = document.getElementById("user-message");
 const userAvatar = document.getElementById("user-avatar");
 const userName = document.getElementById("user-name");
 const userHandle = document.getElementById("user-handle");
 const userJoin = document.getElementById("user-join");
 const userBio = document.getElementById("user-bio");
+const userRepos = document.getElementById("repos");
+const userFollowers = document.getElementById("followers");
+const userFollowing = document.getElementById("following");
+const userLocation = document.getElementById("location");
+const userWebsite = document.getElementById("website");
+const userTwitter = document.getElementById("twitter");
+const userOrganization = document.getElementById("organization");
 
 // document.getElementById("");
 // event listener on submit button
@@ -18,7 +26,6 @@ searchButton.addEventListener("click", (e) => {
   e.preventDefault(); //stop page from refreshing
   const usernameString = searchString.value;
   let stringValid = inputValidator(usernameString);
-  console.log(stringValid);
 
   if (typeof stringValid === "string") {
     getUser(usernameString);
@@ -30,8 +37,8 @@ const inputValidator = function (usernameString) {
   const acceptedInput = /[a-zA-Z0-9]/;
 
   if (!usernameString.match(acceptedInput)) {
-    console.log("Invalid input!");
-    // userMessage.innerText = "";
+    console.log("Invalid Input!");
+    userMessage.innerHTML = "Only letters and numbers please";
   } else {
     console.log("Valid Input ❤️");
     return usernameString;
@@ -45,26 +52,28 @@ const getUser = async function (usernameString) {
   );
   const data = await response.json();
   console.log(data);
+  if (data.message === "Not Found") {
+    userMessage.innerHTML = "No Results";
+  } else if (
+    data.message ===
+    "You have sent an invalid request. Please do not send this request again."
+  ) {
+    userMessage.innerHTML = "Only letters and numbers please";
+  }
 
   const avatar = data.avatar_url;
+  userAvatar.src = avatar;
+
   const name = data.name;
+  userName.innerHTML = name;
+
   const handle = data.login;
+  userHandle.innerHTML = `@${handle}`;
+
+  // User joined date
   const join = data.created_at;
-  const bio = data.bio;
-  const repos = data.public_repos;
-  const followers = data.followers;
-  const following = data.following;
-  const location = data.location;
-  const website = data.blog;
-  const twitter = data.twitter_username;
-  const organization = data.company;
-
-  console.log(join);
   const joinObject = new Date(join);
-  console.log(joinObject);
-  console.log(joinObject.getDate());
   const joinMonth = joinObject.getMonth();
-
   const monthNames = [
     "Jan",
     "Feb",
@@ -80,29 +89,53 @@ const getUser = async function (usernameString) {
     "Dec",
   ];
 
-  console.log(monthNames[joinMonth]);
+  const date = joinObject.getDate();
+  const month = monthNames[joinMonth];
+  const year = joinObject.getFullYear();
+  userJoin.innerHTML = `Joined ${date} ${month} ${year}`;
 
-  console.log(joinObject.getFullYear());
-  // console.log(join.parse());
-  // console.log(typeof join);
-  // console.log(join.substring(5, 7));
+  // User bio section
+  const bio = data.bio;
+  if (bio === null) {
+    userBio.innerHTML = "Not Available";
+  } else {
+    userBio.innerHTML = bio;
+  }
 
-  // const month = join.getMonth();
-  // console.log(month);
+  const repos = data.public_repos;
+  userRepos.innerHTML = repos;
 
-  // console.log(bio);
-  // console.log(repos);
-  // console.log(followers);
-  // console.log(following);
-  // console.log(location);
-  // console.log(website);
-  // console.log(twitter);
-  // console.log(organization);
+  const followers = data.followers;
+  userFollowers.innerHTML = followers;
 
-  userAvatar.src = avatar;
-  userName.innerHTML = name;
-  userHandle.innerHTML = "@" + handle;
-  userJoin.innerHTML = `Joined ${joinObject.getDate()} ${
-    monthNames[joinMonth]
-  } ${joinObject.getFullYear()}`;
+  const following = data.following;
+  userFollowing.innerHTML = following;
+
+  const location = data.location;
+  if (location === null) {
+    userLocation.innerHTML = "Not Available";
+  } else {
+    userLocation.innerHTML = location;
+  }
+
+  const website = data.blog;
+  if (website === null) {
+    userWebsite.innerHTML = "Not Available";
+  } else {
+    userWebsite.innerHTML = website;
+  }
+
+  const twitter = data.twitter_username;
+  if (twitter === null) {
+    userTwitter.innerHTML = "Not Available";
+  } else {
+    userTwitter.innerHTML = twitter;
+  }
+
+  const organization = data.company;
+  if (organization === null) {
+    userOrganization.innerHTML = "Not Available";
+  } else {
+    userOrganization.innerHTML = organization;
+  }
 };

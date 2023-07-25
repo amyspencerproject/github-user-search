@@ -29,3 +29,7 @@ classList.toggle("drk-mode-on");
 // console.log(website);
 // console.log(twitter);
 // console.log(organization);
+
+Joined ${joinObject.getDate()} ${
+monthNames[joinMonth]
+} ${joinObject.getFullYear()}
