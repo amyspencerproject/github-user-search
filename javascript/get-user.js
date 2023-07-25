@@ -34,7 +34,7 @@ searchButton.addEventListener("click", (e) => {
 
 //validate the search string
 const inputValidator = function (usernameString) {
-  const acceptedInput = /[a-zA-Z0-9]/;
+  const acceptedInput = /^[a-zA-Z0-9]+$/;
 
   if (!usernameString.match(acceptedInput)) {
     console.log("Invalid Input!");

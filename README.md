@@ -71,6 +71,12 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 - Last bit of advice was to build a themes in css and then apply it to root element as an attribute instead of applying theme to each individual item.
 
+- My validation was not working if there were any letters or numbers along with spaces and special charaters.
+  Answer from Discord:
+
+  "You need to extend your regex so that it begins with that, ends with that, and only contains that, so this one should work /^[a-zA-Z0-9]+$/
+  The caret means the string must start with this. The plus means at least 1 of those characters, and the dollar means it must also be the end of the string"
+
 ### Continued development
 
 ### Useful resources
@@ -80,6 +86,8 @@ const response = await fetch("https://api.github.com/users/octocat");
 - [Toggle for dark mode](https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp) - the function you put in the `onclick` attribute comes from whatever script files you have imported into the html file.
 - [Dark Mode theme with CSS variables](https://lukelowrey.com/css-variable-theme-switcher/)
 - [Event Listener on Radio Buttons](https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)
+- [Date Contructore](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
+- [Date Prototype for Month](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
 
 ## Author
 
