@@ -10,9 +10,13 @@ const userRepos = document.getElementById("repos");
 const userFollowers = document.getElementById("followers");
 const userFollowing = document.getElementById("following");
 const userLocation = document.getElementById("location");
+const locationIcon = document.querySelector(".location-icon");
 const userWebsite = document.getElementById("website");
+const websiteIcon = document.querySelector(".website-icon");
 const userTwitter = document.getElementById("twitter");
+const twitterIcon = document.querySelector(".twitter-icon");
 const userOrganization = document.getElementById("organization");
+const organizationIcon = document.querySelector(".org-icon");
 
 // document.getElementById("");
 // event listener on submit button
@@ -117,6 +121,7 @@ const getUser = async function (usernameString) {
   if (location === null) {
     userLocation.innerHTML = "Not Available";
     userLocation.style.color = "var(--not-available)";
+    locationIcon.style.fill = "var(--not-available)";
   } else {
     userLocation.innerHTML = location;
   }
@@ -125,6 +130,7 @@ const getUser = async function (usernameString) {
   if (website === null) {
     userWebsite.innerHTML = "Not Available";
     userWebsite.style.color = "var(--not-available)";
+    websiteIcon.style.fill = "var(--not-available)";
   } else {
     userWebsite.innerHTML = website;
   }
@@ -133,6 +139,7 @@ const getUser = async function (usernameString) {
   if (twitter === null) {
     userTwitter.innerHTML = "Not Available";
     userTwitter.style.color = "var(--not-available)";
+    twitterIcon.style.fill = "var(--not-available)";
   } else {
     userTwitter.innerHTML = twitter;
   }
@@ -141,6 +148,7 @@ const getUser = async function (usernameString) {
   if (organization === null) {
     userOrganization.innerHTML = "Not Available";
     userOrganization.style.color = "var(--not-available)";
+    organizationIcon.style.fill = "var(--not-available)";
   } else {
     userOrganization.innerHTML = organization;
   }

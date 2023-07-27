@@ -88,7 +88,6 @@ select {
   --background-section: #fefefe;
   --section-shadow: hsla(227, 46%, 50%, 19.86%);
   --not-available: #979797;
-
   --btn-blue: hsl(212, 100%, 50%);
   --btn-active-blue: hsl(212, 100%, 69%);
   --btn-text: #ffffff;
@@ -330,6 +329,13 @@ h4 {
   margin: 0.5rem;
   color: var(--secondary);
   text-decoration: none;
+}
+
+.location-icon,
+.website-icon,
+.twitter-icon,
+.org-icon {
+  fill: var(--secondary);
 }
 
 .space-row {
