@@ -24,6 +24,7 @@ const userOrganization = document.getElementById("organization");
 
 searchButton.addEventListener("click", (e) => {
   e.preventDefault(); //stop page from refreshing
+  userMessage.innerHTML = "";
   const usernameString = searchString.value;
   let stringValid = inputValidator(usernameString);
 
@@ -98,6 +99,7 @@ const getUser = async function (usernameString) {
   const bio = data.bio;
   if (bio === null) {
     userBio.innerHTML = "Not Available";
+    userBio.style.color = "var(--not-available)";
   } else {
     userBio.innerHTML = bio;
   }
@@ -114,6 +116,7 @@ const getUser = async function (usernameString) {
   const location = data.location;
   if (location === null) {
     userLocation.innerHTML = "Not Available";
+    userLocation.style.color = "var(--not-available)";
   } else {
     userLocation.innerHTML = location;
   }
@@ -121,6 +124,7 @@ const getUser = async function (usernameString) {
   const website = data.blog;
   if (website === null) {
     userWebsite.innerHTML = "Not Available";
+    userWebsite.style.color = "var(--not-available)";
   } else {
     userWebsite.innerHTML = website;
   }
@@ -128,6 +132,7 @@ const getUser = async function (usernameString) {
   const twitter = data.twitter_username;
   if (twitter === null) {
     userTwitter.innerHTML = "Not Available";
+    userTwitter.style.color = "var(--not-available)";
   } else {
     userTwitter.innerHTML = twitter;
   }
@@ -135,6 +140,7 @@ const getUser = async function (usernameString) {
   const organization = data.company;
   if (organization === null) {
     userOrganization.innerHTML = "Not Available";
+    userOrganization.style.color = "var(--not-available)";
   } else {
     userOrganization.innerHTML = organization;
   }
