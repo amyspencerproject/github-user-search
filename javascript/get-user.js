@@ -1,5 +1,4 @@
-const searchButton = document.getElementById("search-button");
-const searchSubmit = document.getElementById("search-submit");
+const searchForm = document.getElementById("search-form");
 const searchString = document.getElementById("search-input");
 const userMessage = document.getElementById("user-message");
 const userAvatar = document.getElementById("user-avatar");
@@ -38,7 +37,6 @@ const inputValidator = function (usernameString) {
     console.log("Invalid Input!");
     userMessage.innerHTML = "Only letters and numbers please";
   } else {
-    console.log("Valid Input ❤️");
     return usernameString;
   }
 };
@@ -49,7 +47,6 @@ const getUser = async function (usernameString) {
     `https://api.github.com/users/${usernameString}`
   );
   const data = await response.json();
-  console.log(data);
   if (data.message === "Not Found") {
     userMessage.innerHTML = "No Results";
   } else if (
