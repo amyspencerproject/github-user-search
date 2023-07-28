@@ -70,7 +70,7 @@
       </form>
     </header>
     <main>
-      <div class="search-container section-background">
+      <form id="search-submit" class="search-container section-background">
         <img src="./assets/icon-search.svg" alt="" class="search-icon" />
         <input
           type="text"
@@ -79,8 +79,10 @@
           placeholder="Search GitHub username... "
         />
         <p id="user-message" class="user-message"></p>
-        <button id="search-button" class="btn-search">Search</button>
-      </div>
+        <input type="submit" value="Search" id="search-button" class="btn-search">
+          
+      </input>
+      </form>
 
       <div class="user-info-container section-background">
         <div class="user-profile">
@@ -149,7 +151,9 @@
               </g>
             </svg>
 
-            <a id="website" href="" class="website">https://github.blog</a>
+            <a id="website" href="" target="_blank" class="website"
+              >https://github.blog</a
+            >
           </div>
 
           <div class="twitter-wrapper space-row">
@@ -164,7 +168,9 @@
                 fill=""
               />
             </svg>
-            <a id="twitter" href="" class="twitter">Not Available</a>
+            <a id="twitter" href="" target="_blank" class="twitter"
+              >Not Available</a
+            >
           </div>
 
           <div class="org-wrapper space-row">
@@ -180,7 +186,7 @@
                 />
               </g>
             </svg>
-            <a id="organization" href="" class="org">@github</a>
+            <a id="organization" href="" target="_blank" class="org">@github</a>
           </div>
         </div>
       </div>

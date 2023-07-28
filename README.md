@@ -26,7 +26,6 @@ Users should be able to:
 - Search for GitHub users by their username using the [GitHub User API](https://docs.github.com/en/rest/users?apiVersion=2022-11-28#get-a-user)
 - See relevant user information based on their search
 - Switch between light and dark themes
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 The GitHub users API endpoint is `https://api.github.com/users/:username`. So, if you wanted to search for the Octocat profile, you'd be able to make a request to `https://api.github.com/users/octocat`.
 
@@ -71,13 +70,11 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 - Last bit of advice was to build a themes in css and then apply it to root element as an attribute instead of applying theme to each individual item.
 
-- My validation was not working if there were any letters or numbers along with spaces and special charaters.
-  Answer from Discord:
-
-  "You need to extend your regex so that it begins with that, ends with that, and only contains that, so this one should work /^[a-zA-Z0-9]+$/
-  The caret means the string must start with this. The plus means at least 1 of those characters, and the dollar means it must also be the end of the string"
+- My validation was not working if there were any letters or numbers along with spaces and special charaters. I needed to extend your regex to specify that letters must start, end, and only contain with letters/numbers. This regex `/^[a-zA-Z0-9]+$/` worked! The caret means the string must start with this. The plus means at least 1 of those characters, and the dollar means it must also be the end of the string
 
 ### Continued development
+
+**Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 ### Useful resources
 

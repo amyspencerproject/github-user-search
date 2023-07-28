@@ -1,4 +1,5 @@
 const searchButton = document.getElementById("search-button");
+const searchSubmit = document.getElementById("search-submit");
 const searchString = document.getElementById("search-input");
 const userMessage = document.getElementById("user-message");
 const userAvatar = document.getElementById("user-avatar");
@@ -18,7 +19,7 @@ const twitterIcon = document.querySelector(".twitter-icon");
 const userOrganization = document.getElementById("organization");
 const organizationIcon = document.querySelector(".org-icon");
 
-searchButton.addEventListener("click", (e) => {
+addEventListener("submit", (e) => {
   e.preventDefault(); //stop page from refreshing
   userMessage.innerHTML = "";
   const usernameString = searchString.value;
