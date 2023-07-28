@@ -1,4 +1,4 @@
-# Frontend Mentor - GitHub user search app solution
+# GitHub User Search App solution
 
 This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -42,7 +42,8 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/light-mode.png) ![](./screenshots/dark-mode.png)
+![](./screenshots/user-search.png) ![](./screenshots/user-message.png)
 
 ### Links
 
@@ -66,7 +67,7 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 - Using `onclick=` in the HTML did not work! I could only select IDs and elements not classes when using this method. I asked on FEM's Dicord for advice and changed my plan. Using an event listener is better because everything is more flexible. You can add more that one event listener to an html element. You can remove event listeners easily in the future. There is better separation fo concerns by keeping the JS code seperated from the HTML.
 
-- Further advice was to use radio buttons as a toggle for themes. Again this makes it easier to add different themes or more themes in the future.
+- Further advice was to use radio buttons as a toggle for themes. Again this makes it easier to add different themes or more themes in the future. I managed to get this to work but I think there might be a better solution.
 
 - Last bit of advice was to build a themes in css and then apply it to root element as an attribute instead of applying theme to each individual item.
 
@@ -85,6 +86,7 @@ const response = await fetch("https://api.github.com/users/octocat");
 - [Event Listener on Radio Buttons](https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)
 - [Date Contructore](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
 - [Date Prototype for Month](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
+- [Remove Character from String](https://stackoverflow.com/questions/9932957/how-can-i-remove-a-character-from-a-string-using-javascript) - Used this for removing the @ on the organziation handle.
 
 ## Author
 
