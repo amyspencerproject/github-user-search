@@ -18,14 +18,6 @@ const twitterIcon = document.querySelector(".twitter-icon");
 const userOrganization = document.getElementById("organization");
 const organizationIcon = document.querySelector(".org-icon");
 
-// document.getElementById("");
-// event listener on submit button
-// store search sting into variable
-// validate the search string? like not chiocciola, spaces or maybe change case etc
-// call API and see if there is a match
-// populate fields with user info or return an no match error
-//
-
 searchButton.addEventListener("click", (e) => {
   e.preventDefault(); //stop page from refreshing
   userMessage.innerHTML = "";
@@ -70,6 +62,9 @@ const getUser = async function (usernameString) {
   userAvatar.src = avatar;
 
   const name = data.name;
+  if (name === null) {
+    userName.innerHTML = handle;
+  }
   userName.innerHTML = name;
 
   const handle = data.login;
@@ -102,7 +97,7 @@ const getUser = async function (usernameString) {
   // User bio section
   const bio = data.bio;
   if (bio === null) {
-    userBio.innerHTML = "Not Available";
+    userBio.innerHTML = "This profile has no bio";
     userBio.style.color = "var(--not-available)";
   } else {
     userBio.innerHTML = bio;
@@ -133,6 +128,7 @@ const getUser = async function (usernameString) {
     websiteIcon.style.fill = "var(--not-available)";
   } else {
     userWebsite.innerHTML = website;
+    userWebsite.href = website;
   }
 
   const twitter = data.twitter_username;
@@ -142,6 +138,7 @@ const getUser = async function (usernameString) {
     twitterIcon.style.fill = "var(--not-available)";
   } else {
     userTwitter.innerHTML = twitter;
+    userTwitter.href = twitter;
   }
 
   const organization = data.company;
@@ -151,5 +148,7 @@ const getUser = async function (usernameString) {
     organizationIcon.style.fill = "var(--not-available)";
   } else {
     userOrganization.innerHTML = organization;
+    organizationGithub = organization.replace("@", "https://github.com/");
+    userOrganization.href = organizationGithub;
   }
 };
