@@ -112,6 +112,11 @@ body {
   background-color: var(--background-body);
   color: var(--primary);
   font-family: "Space Mono", monospace;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+main {
   display: grid;
   place-content: center;
 }

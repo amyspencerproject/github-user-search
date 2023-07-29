@@ -73,6 +73,8 @@ const response = await fetch("https://api.github.com/users/octocat");
 
 - My validation was not working if there were any letters or numbers along with spaces and special charaters. I needed to extend your regex to specify that letters must start, end, and only contain with letters/numbers. This regex `/^[a-zA-Z0-9]+$/` worked! The caret means the string must start with this. The plus means at least 1 of those characters, and the dollar means it must also be the end of the string
 
+- In-line `<svg>` is something I avoid. This challenge requres that the fill of the `svg` icons change with hover and when data is not available. I had some weird clipping issues when a website url was really long. I tried switching to flex, playing with margins, trying to change object-fit. In the end I added the `overflow="visible"` attribute to the `<svg>` div.
+
 ### Continued development
 
 **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
@@ -87,6 +89,7 @@ const response = await fetch("https://api.github.com/users/octocat");
 - [Date Contructore](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date)
 - [Date Prototype for Month](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
 - [Remove Character from String](https://stackoverflow.com/questions/9932957/how-can-i-remove-a-character-from-a-string-using-javascript) - Used this for removing the @ on the organziation handle.
+- [Common `svg` Fails](https://css-tricks.com/6-common-svg-fails-and-how-to-fix-them/)
 
 ## Author
 
