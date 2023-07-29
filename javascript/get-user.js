@@ -47,6 +47,7 @@ const getUser = async function (usernameString) {
     `https://api.github.com/users/${usernameString}`
   );
   const data = await response.json();
+  console.log(data);
   if (data.message === "Not Found") {
     userMessage.innerHTML = "No Results";
   } else if (
@@ -56,17 +57,22 @@ const getUser = async function (usernameString) {
     userMessage.innerHTML = "Only letters and numbers please";
   }
 
+  const handle = data.login;
+  if (handle === null) {
+    userHandle.innerHTML = "Not Available";
+  } else {
+    userHandle.innerHTML = `@${handle}`;
+  }
+
   const avatar = data.avatar_url;
   userAvatar.src = avatar;
 
   const name = data.name;
   if (name === null) {
     userName.innerHTML = handle;
+  } else {
+    userName.innerHTML = name;
   }
-  userName.innerHTML = name;
-
-  const handle = data.login;
-  userHandle.innerHTML = `@${handle}`;
 
   // User joined date
   const join = data.created_at;
@@ -146,7 +152,7 @@ const getUser = async function (usernameString) {
     organizationIcon.style.fill = "var(--not-available)";
   } else {
     userOrganization.innerHTML = organization;
-    organizationGithub = organization.replace("@", "https://github.com/");
+    const organizationGithub = organization.replace("@", "https://github.com/");
     userOrganization.href = organizationGithub;
   }
 };

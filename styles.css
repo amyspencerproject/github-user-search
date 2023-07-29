@@ -80,30 +80,30 @@ select {
 
 :root,
 [data-theme="light"] {
-  --primary: #697c9a;
-  --secondary: #4b6a9b;
-  --secondary-hover: #2b3442;
-  --header: #2b3442;
+  --primary: hsl(217, 20%, 51%);
+  --secondary: hsl(217, 35%, 45%);
+  --secondary-hover: hsl(217, 21%, 21%);
+  --header: hsl(217, 21%, 21%);
   --background-body: #f6f8ff;
   --background-section: #fefefe;
   --section-shadow: hsla(227, 46%, 50%, 19.86%);
-  --not-available: #979797;
+  --not-available: hsl(0, 0%, 59%);
   --btn-blue: hsl(212, 100%, 50%);
   --btn-active-blue: hsl(212, 100%, 69%);
-  --btn-text: #ffffff;
+  --btn-text: hsl(0, 100%, 100%);
   --chiocciola-text-blue: hsl(212, 100%, 50%);
   --error-text: hsl(0, 92%, 62%);
   --drk-active-text-blue: hsl(222, 44%, 70%);
 }
 
 [data-theme="dark"] {
-  --primary: #ffffff;
-  --secondary: #ffffff;
-  --secondary-hover: #90a4d4;
-  --header: #ffffff;
-  --background-body: #141d2f;
-  --background-section: #1e2a47;
-  --section-shadow: #141d2f;
+  --primary: hsl(0, 100%, 100%);
+  --secondary: hsl(0, 100%, 100%);
+  --secondary-hover: hsl(222, 44%, 70%);
+  --header: hsl(0, 100%, 100%);
+  --background-body: hsl(220, 40%, 13%);
+  --background-section: hsl(222, 41%, 20%);
+  --section-shadow: hsl(220, 40%, 13%);
 }
 
 /* ========================= Base Styles ========================= */
